@@ -1,0 +1,35 @@
+{
+  "name": "bridgecast",
+  "version": "0.1.0",
+  "description": "Notify Bridgeport bridges about new transactions",
+  "main": "index.js",
+  "scripts": {
+    "doc": "documentation readme index.js --section=API",
+    "lint": "standard --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p2ppsr/bridgecast.git"
+  },
+  "keywords": [
+    "Bridgeport",
+    "BSV",
+    "broadcast",
+    "bridge",
+    "gossip"
+  ],
+  "author": "Peer-to-peer Privacy Systems Research LLC",
+  "license": "Open BSV License",
+  "bugs": {
+    "url": "https://github.com/p2ppsr/bridgecast/issues"
+  },
+  "homepage": "https://github.com/p2ppsr/bridgecast#readme",
+  "devDependencies": {
+    "documentation": "^13.2.5",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "boomerang-http": "^0.1.0",
+    "parapet-js": "^0.1.1"
+  }
+}
