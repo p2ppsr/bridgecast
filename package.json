@@ -1,6 +1,6 @@
 {
   "name": "bridgecast",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Notify Bridgeport bridges about new transactions",
   "main": "index.js",
   "scripts": {

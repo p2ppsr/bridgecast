@@ -1,5 +1,5 @@
 const parapet = require('parapet-js')
-const boomerang = require('@cwi/boomerang')
+const boomerang = require('boomerang-http')
 
 /**
  * Notify Bridgeport bridges about new transactions
