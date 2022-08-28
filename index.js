@@ -7,16 +7,18 @@ const boomerang = require('boomerang-http')
  * @param {Object} obj All parameters are provided in an object
  * @param {Array<String>} obj.bridges The array of Bridge IDs to notify
  * @param {Object} obj.tx An Everett-style transaction envelope
+ * @param {array<string>} obj.bridgeportResolvers The BHRP resolvers used when broadcasting the transaction
  *
  * @returns {Promise<Array<String>>} Bridge IDs that accepted the transaction
  */
-const bridgecast = async ({ bridges = [], tx } = {}) => {
+const bridgecast = async ({ bridges = [], tx, bridgeportResolvers } = {}) => {
   const broadcastURLs = {}
 
   // For each bridge that accepted the tx, look up other BHRP nodes
   for (const bridge of bridges) {
     const nodes = await parapet({
       bridge: '1TW5ogeDZyvq5q7tEjpNcBmJWsmQk7AeQ', // BHRP
+      bridgeportResolvers,
       request: {
         type: 'json-query',
         query: {
