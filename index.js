@@ -18,7 +18,7 @@ const bridgecast = async ({ bridges = [], tx, bridgeportResolvers } = {}) => {
   for (const bridge of bridges) {
     const nodes = await parapet({
       bridge: '1TW5ogeDZyvq5q7tEjpNcBmJWsmQk7AeQ', // BHRP
-      bridgeportResolvers,
+      resolvers: bridgeportResolvers,
       request: {
         type: 'json-query',
         query: {
